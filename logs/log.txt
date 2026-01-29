@@ -1,0 +1,48 @@
+path:/workspaces/BIO_PROJET_2026-
+path:Thu Jan 29 08:10:01 UTC 2026
+    1  wget https://drive.google.com/file/d/1dn3weVJGfNG114INJ8mGLnZZRz9CQ2fR9t/view?usp=sharing
+    2  mkdir -p data script logs 
+    3  echo "path:$(pwd)" >>logs/log.txt
+    4  echo "path:$(date)" >>logs/log.txt
+    5  touch data/file_{1..5}.txt
+    6  tar -czf archive.tar.gz data/
+    7  mkdir archives
+    8  mv archievs.tar.gz archives/
+    9  mv archives.tar.gz archives/
+   10  history 20 >> logs/log.txt
+   14  chmod +x bash.sh
+   15  chmod +x script/bash.sh
+   16  ./scripts/bash.sh archives/archive.tar.gz archives/archive_copy.tar.gz
+   17  ./script/bash.sh archives.tar.gz archives/archive_copy.tar.gz
+   18  ls
+   19  ls archives 
+   20  ./script/bash.sh archive.tar.gz archives/archive_copy.tar.gz
+   21  ls -l archives
+   22  ./script/bash.sh ./archive.tar.gz ./archives/archive_copy.tar.gz
+   23  history 10 >> logs/log.txt
+.:
+README.md
+archive.tar.gz
+archives
+data
+logs
+script
+
+./archives:
+archive_copy.tar.gz
+
+./data:
+file_1.txt
+file_2.txt
+file_3.txt
+file_4.txt
+file_5.txt
+
+./logs:
+log.txt
+
+./script:
+bash.sh
+py_1.py
+py_2.py
+py_3.py
